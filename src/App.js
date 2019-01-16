@@ -20,20 +20,11 @@ class App extends Component {
 
 }
 
-// Transform (0..360] to (0..256] with no awkward wrap-around/overflow
-const orientationToBrightness = orientation => {
-  orientation = (orientation+360)%360;
-  if (orientation > 180) 
-    orientation = 360 - orientation;
-  orientation = orientation*256/180;
-  orientation = Math.round(orientation);
-  return orientation;
-}
 const mapStateToProps = state => (
   {
-    red: orientationToBrightness(state.orientation.alpha),
-    green: orientationToBrightness(state.orientation.beta),
-    blue: orientationToBrightness(state.orientation.gamma)
+    red: state.rgb.red,
+    green: state.rgb.green,
+    blue: state.rgb.blue
   }
 )
 
