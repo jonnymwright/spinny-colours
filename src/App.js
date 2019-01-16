@@ -27,7 +27,6 @@ const orientationToBrightness = orientation => {
     orientation = 360 - orientation;
   orientation = orientation*256/180;
   orientation = Math.round(orientation);
-  console.log(orientation);
   return orientation;
 }
 const mapStateToProps = state => (
