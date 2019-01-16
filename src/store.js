@@ -1,5 +1,3 @@
-
-import './index.css';
 import testApp from './reducers/testApp'
 import { createStore, applyMiddleware } from 'redux'
 import {createLogger} from 'redux-logger';
